@@ -15,8 +15,16 @@ module.exports = {
         include: SRC_DIR,
         loader: 'babel-loader',
         query: {
-          presets: ['@babel/preset-react', '@babel/preset-env']
+          presets: ['@babel/react', '@babel/env'],
         }
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
       }
     ]
   }
