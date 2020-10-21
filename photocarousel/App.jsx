@@ -20,9 +20,9 @@ const Photocarousel = () => {
   // console.log('clientb', listing);
 
   useEffect(() => { // a hooks version of componentDidMount
-    const queryID = window.location.search;
+    let queryID = window.location.search || '?propertyId=1';
     // console.log('logged: window.location (url parameter) = ?id=10', queryID)
-    const url = '/listing' + '/' + queryID;
+    let url = `/listing/${queryID}`;
     axios.get(url)
     .then((res) => {
       setListing(res.data);
