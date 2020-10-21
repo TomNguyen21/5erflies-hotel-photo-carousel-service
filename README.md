@@ -11,10 +11,10 @@ End goal is a seamless interaction between the client, api, and database to supp
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/5erflies/5erflies-hotel-photo-carousel-service
+  - https://github.com/5erflies/5erflies-hotel-reviews-service
+  - https://github.com/5erflies/5erflies-hotel-more-places-service
+  - https://github.com/5erflies/5erflies-hotel-more-places-proxy
 
 ## Table of Contents
 
