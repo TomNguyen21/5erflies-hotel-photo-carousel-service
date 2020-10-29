@@ -1,15 +1,15 @@
 import styled, { keyframes, ThemeProvider } from 'styled-components';
 
-const theme = {
+export const theme = {
   background: '#aaa',
   color: '#24292e'
 };
 
-const AppWrapper = styled.div`
+export const AppWrapper = styled.div`
   position: relative;
 `;
 
-const MainWrapper = styled.div`
+export const MainWrapper = styled.div`
   width: 60% ;
   margin: 0 auto;
   margin-top: ${props => props.show ? '0px' : '40px'};
@@ -17,7 +17,7 @@ const MainWrapper = styled.div`
   opacity: ${props => props.show ? 0 : 1};
 `;
 
-const slideup = keyframes`
+export const slideup = keyframes`
   0% {
     /* position relative to itself */
     transform: translateY(0px);
@@ -29,7 +29,7 @@ const slideup = keyframes`
   }
 `;
 
-const slidedown = keyframes`
+export const slidedown = keyframes`
   0% {
     /* if position of itself is fixed, then relative to window, if absolute, then relative to itself */
     transform: translateY(-450px);
@@ -41,7 +41,7 @@ const slidedown = keyframes`
   }
 `;
 
-const Slider = styled.div`
+export const Slider = styled.div`
 /* null to prevent a slidedown / slide up without clicking button */
   /* display: ${props => props.show ? 'block' : 'none'}; */
   animation: ${props => props.show === null ? 'none' : props.show ? slideup : slidedown};
@@ -56,7 +56,7 @@ const Slider = styled.div`
   top: 450px;
 `;
 
-const PhotoButton = styled.button`
+export const PhotoButton = styled.button`
   position: absolute;
   bottom: 25px;
   right: 30px;
@@ -74,14 +74,14 @@ const PhotoButton = styled.button`
   border-width: 1px;
 `;
 
-const RoundedCorner = styled.div`
+export const RoundedCorner = styled.div`
   border-radius: 13px;
   overflow: hidden;
   /* height: 372px; */
   display: flex;
 `;
 
-const Imgagery = styled.img`
+export const Imgagery = styled.img`
   width: 100%;
   /* height: auto; */
   height: 100%;
@@ -94,7 +94,7 @@ const Imgagery = styled.img`
   };
 `;
 
-const MainWrapper = styled.div`
+export const GalleryWrapper = styled.div`
   max-width: 1120px;
   flex: 1;
   /* float: left; */
@@ -102,7 +102,7 @@ const MainWrapper = styled.div`
   margin-right: 0.7%;
 `;
 
-const SubWrapper = styled.div`
+export const SubWrapper = styled.div`
   display: flex;
   /* width: 50%; */
   flex-flow: wrap;
@@ -110,7 +110,7 @@ const SubWrapper = styled.div`
   flex: 1;
 `;
 
-const Grid = styled.div`
+export const Grid = styled.div`
   margin-right: ${props => props.picIndex % 2 === 0 ? '1.3%' : '0'};
   width: 49.35%;
   margin-bottom: ${props => props.picIndex < 2 ? '1.3%' : '0'};
