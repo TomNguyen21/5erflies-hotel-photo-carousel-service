@@ -7,8 +7,8 @@ import { ThemeProvider } from 'styled-components';
 // import Share from '../photos/share.png';
 
 const Header = ({list}) => (
-  <Wrapper>
-      <ThemeProvider theme={theme}>
+  <HeaderWrapper>
+      <ThemeProvider theme={HeaderTheme}>
           <TitleBlock>{list.listingTitle}</TitleBlock>
           <InfoData>
             <Logo src="https://5erflies.s3-us-west-1.amazonaws.com/icons/star.png"/>
@@ -31,17 +31,17 @@ const Header = ({list}) => (
             </ShareButton> */}
           </Socialmedia>
       </ThemeProvider>
-  </Wrapper>
+  </HeaderWrapper>
 )
 
 
-const theme = {
+const HeaderTheme = {
   titleColor: '#000',
   subColor: '#6e6d6d',
   padding: '4em'
 }
 
-const Wrapper = styled.div`
+const HeaderWrapper = styled.div`
   /* margin-top: 40px */
   margin-bottom: 20px;
 `;
