@@ -31,7 +31,6 @@ const Photocarousel = () => {
     })
   }, []);
 
-
   if (listing.length == 0) {return null;}
   return (
     <AppWrapper>
