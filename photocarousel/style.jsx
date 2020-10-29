@@ -1,15 +1,15 @@
 import styled, { keyframes, ThemeProvider } from 'styled-components';
 
-export const theme = {
+const theme = {
   background: '#aaa',
   color: '#24292e'
 };
 
-export const AppWrapper = styled.div`
+const AppWrapper = styled.div`
   position: relative;
 `;
 
-export const MainWrapper = styled.div`
+const MainWrapper = styled.div`
   width: 60% ;
   margin: 0 auto;
   margin-top: ${props => props.show ? '0px' : '40px'};
@@ -17,7 +17,7 @@ export const MainWrapper = styled.div`
   opacity: ${props => props.show ? 0 : 1};
 `;
 
-export const slideup = keyframes`
+const slideup = keyframes`
   0% {
     /* position relative to itself */
     transform: translateY(0px);
@@ -29,7 +29,7 @@ export const slideup = keyframes`
   }
 `;
 
-export const slidedown = keyframes`
+const slidedown = keyframes`
   0% {
     /* if position of itself is fixed, then relative to window, if absolute, then relative to itself */
     transform: translateY(-450px);
@@ -41,7 +41,7 @@ export const slidedown = keyframes`
   }
 `;
 
-export const Slider = styled.div`
+const Slider = styled.div`
 /* null to prevent a slidedown / slide up without clicking button */
   /* display: ${props => props.show ? 'block' : 'none'}; */
   animation: ${props => props.show === null ? 'none' : props.show ? slideup : slidedown};
@@ -55,3 +55,22 @@ export const Slider = styled.div`
   position: absolute; //for overlap the gallery
   top: 450px;
 `;
+
+const PhotoButton = styled.button`
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
+  width: 146px;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 450;
+  border-radius: 7px;
+  color: #000;
+  height: 30px;
+  background-color: #F7F7F7;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  border-width: 1px;
+`;
+
