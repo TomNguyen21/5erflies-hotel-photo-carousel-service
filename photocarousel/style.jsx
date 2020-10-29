@@ -118,3 +118,87 @@ export const Grid = styled.div`
   float: left;
   overflow: hidden;
 `;
+
+export const HeaderTheme = {
+  titleColor: '#000',
+  subColor: '#6e6d6d',
+  padding: '4em'
+}
+
+export const HeaderWrapper = styled.div`
+  /* margin-top: 40px */
+  margin-bottom: 20px;
+`;
+
+export const InfoData = styled.div`
+  display: inline-block;
+  font-size: 14px;
+  padding-top: 15px;
+  color: ${props => props.theme.color};
+  font-family: Circular, Roboto, "Helvetica Neue", sans-serif;
+`;
+
+export const Socialmedia = styled.div`
+  display: inline-block;
+  float: right;
+  margin-top: 13px;
+`;
+
+export const PaddingInner = styled.div`
+  padding-right: 0.25rem;
+`;
+
+export const TitleBlock = styled.section`
+  width: 100%;
+  margin: 0 auto;
+  font-family: Circular, Roboto, "Helvetica Neue", sans-serif;
+  color: ${props => props.theme.titleColor};
+  font-size: 26px;
+`;
+
+export const RatingSpan = styled.span`
+  color: ${props => props.theme.titleColor};
+  padding: 0em 0.15em;
+`;
+
+export const SubColor = styled.span`
+  color: ${props => props.theme.subColor};
+  padding: 0em 0.15em;
+`;
+
+export const Underline = styled.span`
+  text-decoration: underline;
+  color: ${props => props.dark ? 'black' : props.theme.subColor};
+  padding: 0em 0.35em;
+  float: right;
+  cursor: pointer;
+  margin-top: ${props => props.location ? '3px' : 'none'};
+`;
+
+export const Dot = styled.span`
+  padding: 0em 0.50em;
+  color: ${props => props.theme.subColor};
+`
+export const Logo = styled.img`
+  width: ${props => props.host ? '10px' : '17px'};
+  height: ${props => props.host ? '16px' : 'none'};
+  padding-right: 7px;
+  float: ${props => props.share ? 'right' : 'none'};
+  cursor: pointer;
+`;
+
+export const ShareButton = styled.button`
+  float: right;
+  border: none;
+  background-color: white;
+  padding: 5px 6px;
+  cursor: pointer;
+  &: hover {
+    background-color: #f2f4f5;
+    padding: 5px 6px;
+    border: none;
+    border-radius: 8px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+`;

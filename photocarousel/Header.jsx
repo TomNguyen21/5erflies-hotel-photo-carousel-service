@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
+import { HeaderTheme, HeaderWrapper, InfoData, Socialmedia, PaddingInner, TitleBlock, RatingSpan, SubColor, Underline, Dot, Logo, ShareButton } from './style.jsx';
 // import Star from '../photos/star.png';
 // import Superhost from '../photos/superhost.png';
 // import Heart from '../photos/heart.png';
@@ -33,90 +33,5 @@ const Header = ({list}) => (
       </ThemeProvider>
   </HeaderWrapper>
 )
-
-
-const HeaderTheme = {
-  titleColor: '#000',
-  subColor: '#6e6d6d',
-  padding: '4em'
-}
-
-const HeaderWrapper = styled.div`
-  /* margin-top: 40px */
-  margin-bottom: 20px;
-`;
-
-const InfoData = styled.div`
-  display: inline-block;
-  font-size: 14px;
-  padding-top: 15px;
-  color: ${props => props.theme.color};
-  font-family: Circular, Roboto, "Helvetica Neue", sans-serif;
-`;
-
-const Socialmedia = styled.div`
-  display: inline-block;
-  float: right;
-  margin-top: 13px;
-`;
-
-const PaddingInner = styled.div`
-  padding-right: 0.25rem;
-`;
-
-const TitleBlock = styled.section`
-  width: 100%;
-  margin: 0 auto;
-  font-family: Circular, Roboto, "Helvetica Neue", sans-serif;
-  color: ${props => props.theme.titleColor};
-  font-size: 26px;
-`;
-
-const RatingSpan = styled.span`
-  color: ${props => props.theme.titleColor};
-  padding: 0em 0.15em;
-`;
-
-const SubColor = styled.span`
-  color: ${props => props.theme.subColor};
-  padding: 0em 0.15em;
-`;
-
-const Underline = styled.span`
-  text-decoration: underline;
-  color: ${props => props.dark ? 'black' : props.theme.subColor};
-  padding: 0em 0.35em;
-  float: right;
-  cursor: pointer;
-  margin-top: ${props => props.location ? '3px' : 'none'};
-`;
-
-const Dot = styled.span`
-  padding: 0em 0.50em;
-  color: ${props => props.theme.subColor};
-`
-const Logo = styled.img`
-  width: ${props => props.host ? '10px' : '17px'};
-  height: ${props => props.host ? '16px' : 'none'};
-  padding-right: 7px;
-  float: ${props => props.share ? 'right' : 'none'};
-  cursor: pointer;
-`;
-
-const ShareButton = styled.button`
-  float: right;
-  border: none;
-  background-color: white;
-  padding: 5px 6px;
-  cursor: pointer;
-  &: hover {
-    background-color: #f2f4f5;
-    padding: 5px 6px;
-    border: none;
-    border-radius: 8px;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-  }
-`;
 
 export default Header;
