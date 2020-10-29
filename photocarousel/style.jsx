@@ -180,11 +180,19 @@ export const Dot = styled.span`
   color: ${props => props.theme.subColor};
 `
 export const Logo = styled.img`
-  width: ${props => props.host ? '10px' : '17px'};
-  height: ${props => props.host ? '16px' : 'none'};
-  padding-right: 7px;
-  float: ${props => props.share ? 'right' : 'none'};
-  cursor: pointer;
+width: ${props => props.host ? '10px' : '17px'};
+height: ${props => props.host ? '16px' : 'none'};
+padding-right: 7px;
+float: ${props => props.share ? 'right' : 'none'};
+cursor: pointer;
+&: hover {
+  background-color: #f2f4f5;
+  padding: 5px 6px;
+  border: none;
+  border-radius: 8px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
 `;
 
 export const ShareButton = styled.button`
@@ -201,4 +209,66 @@ export const ShareButton = styled.button`
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
   }
+`;
+
+export const SocialmediaModal = styled.div`
+  display: inline-block;
+  float: right;
+  margin-top: 13px;
+  margin-right: 70px;
+`;
+
+export const Wrappingdiv = styled.div`
+  text-align: center;
+  margin: 0px auto;
+  width: 980px;
+  display: ${props => props.show ? 'block' : 'none'};
+`;
+
+export const Closebutton = styled.button`
+  display: inline;
+  float: left;
+  top: 40px;
+  left: 40px;
+  position: absolute;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e0e0e0a6;;
+  font-family: Circular, Roboto, "Helvetica Neue", sans-serif;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  color: #222222e3;
+  &: hover {
+    background-color: #e0e0e0;
+  }
+`;
+
+export const CountHeader = styled.div`
+  /* display: inline; */
+  font-size: 1em;
+  font-family: Arial;
+  margin-top: 45px;
+  font-family: Circular, Roboto, "Helvetica Neue",sans-serif;
+  letter-spacing: 0.7px;
+`;
+
+export const ModalImage = styled.img`
+  width: 90%;
+  margin-top: 40px;
+`;
+
+export const ArrowButton = styled.button`
+  border-radius: 50%
+  border: 1px solid  #C5C5C5;
+  font-size: 16px;
+  background-color: white;
+  position: fixed;
+  top: 43%;
+  left: ${props => props.right ? 'none' : '25px'};
+  right: ${props => props.left ? 'none' : '45px'};
+  padding: 14px 18px;
+  cursor: pointer;
 `;
