@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { SocialmediaModal, Underline, Logo, Wrappingdiv, Closingbutton, CountHeader, ModalImage, ArrowButton } from './style.jsx';
+import { SocialmediaModal, Underline, Logo, ShareButton, Wrappingdiv, Closebutton, CountHeader, ModalImage, ArrowButton } from './style.jsx';
 
 const Modal = ({ list, closeModal, clickedPhotoIdx, show }) => {
 
@@ -39,7 +39,7 @@ const Modal = ({ list, closeModal, clickedPhotoIdx, show }) => {
     // return the photo that its index matches the photoCount
     <div>
       <Closebutton onClick={closeModal} >X Close</Closebutton>
-      <Socialmedia>
+      <SocialmediaModal>
       <ShareButton>
           <Logo share src="https://5erflies.s3-us-west-1.amazonaws.com/icons/heart.png"/>
           <Underline dark></Underline>
@@ -48,7 +48,7 @@ const Modal = ({ list, closeModal, clickedPhotoIdx, show }) => {
           <Logo share src="https://5erflies.s3-us-west-1.amazonaws.com/icons/share.png"/>
           <Underline dark></Underline>
       </ShareButton>
-      </Socialmedia>
+      </SocialmediaModal>
       <Wrappingdiv show>
         {/* {console.log(photoCount)} */}
         <CountHeader>{photoCount}/{list.photos.length}</CountHeader>
